@@ -18,7 +18,7 @@ class HashtagRepository {
             const tag = await Hashtag.insertMany(data);
             return tag;
         } catch (error) {
-            console.error('error from bulk tag repo' + error);
+            console.error('error from bulk tag repo ' + error);
             
         }
     }
@@ -46,7 +46,7 @@ class HashtagRepository {
 
     async findByTitle(titleList){
         try {
-            const tags = await Hashtag.findById({
+            const tags = await Hashtag.find({
                 title:titleList
             })
             return tags;
